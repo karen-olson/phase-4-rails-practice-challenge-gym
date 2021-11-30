@@ -1,5 +1,24 @@
 # Rails Practice Challenge - Gym
 
+Many-to-many relationship between clients and gyms, through memberships
+
+x. Use rails g resource to create tables, models, controllers, routes for Gym, Client, and Membership
+a) Remember to include the foreign keys in the join table
+x. Run migrations and seed the database 3. Create controller actions for the following:
+
+x. membership#create
+Validations: - in model: require gym_id, client_id, and membership charge - in model: uniqueness (client can only have one membership with one gym)
+x. gym#show
+Validations: - in controller: if gym doesn't exist, return error w/ status code
+x. gym#destroy
+Validations: - in model: dependent: :destroy memberships 4. client#show
+Validations: not found
+BONUS: send response including total amount for all that client's memberships
+x. gym.index
+x. gym#update
+x. client.index
+x. client#update
+
 ## Setup
 
 To download the dependencies for backend, run:
